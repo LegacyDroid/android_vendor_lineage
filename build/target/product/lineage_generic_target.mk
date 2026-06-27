@@ -13,6 +13,10 @@
 # limitations under the License.
 
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/boringdroid/boringdroid.mk)
+
+PRODUCT_PACKAGES += \
+    android.software.freeform_window_management.xml
 
 PRODUCT_COPY_FILES += \
     device/generic/goldfish/data/etc/permissions/privapp-permissions-goldfish.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-goldfish.xml \

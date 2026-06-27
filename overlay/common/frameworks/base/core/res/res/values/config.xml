@@ -42,6 +42,7 @@
         <item>org.microg.nlp</item>
     </string-array>
 
+    <bool name="config_freeformWindowManagement">true</bool>
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
     <!-- Disable stock OTA components if installed -->
