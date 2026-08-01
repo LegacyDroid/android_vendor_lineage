@@ -1,6 +1,11 @@
 # Allow vendor/extra to override any property by setting it first
 $(call inherit-product-if-exists, vendor/extra/product.mk)
 
+# Magisk boot integration: magiskd's post-fs-data stage needs /data/adb
+# pre-created (magisk_setup.rc, late-fs) with busybox + magiskpolicy seeded
+# to /data/adb/magisk, and the app is pm-installed at sys.boot_completed.
+PRODUCT_PACKAGES += magisk_apk magisk_busybox magisk_magiskpolicy magisk_setup_sh magisk_setup_rc
+
 PRODUCT_BRAND ?= LegacyDroid
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
