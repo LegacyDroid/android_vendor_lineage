@@ -10,6 +10,13 @@ PRODUCT_PACKAGES += magisk_apk magisk_busybox magisk_magiskpolicy magisk_setup_s
 # pm-installed as a user app at sys.boot_completed (termux_setup.rc).
 PRODUCT_PACKAGES += termux_apk termux_setup_sh termux_setup_rc
 
+# RealSR ncnn CLIs: x86_64/arm64 per-arch prebuilts + shared libs + models
+# (shipped only with models-RealeSR-general-v3 for now).
+PRODUCT_PACKAGES += \
+    realsr-ncnn realcugan-ncnn resize-ncnn srmd-ncnn waifu2x-ncnn anime4k-ncnn \
+    ncnn omp \
+    realsr_model_general_v3_param realsr_model_general_v3_bin
+
 PRODUCT_BRAND ?= LegacyDroid
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
