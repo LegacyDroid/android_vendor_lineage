@@ -14,7 +14,7 @@ PRODUCT_PACKAGES += termux_apk termux_setup_sh termux_setup_rc
 # (shipped only with models-RealeSR-general-v3 for now).
 PRODUCT_PACKAGES += \
     realsr-ncnn realcugan-ncnn resize-ncnn srmd-ncnn waifu2x-ncnn anime4k-ncnn \
-    libncnn libomp \
+    libncnn legacydroid_libomp \
     realsr_model_general_v3_param realsr_model_general_v3_bin
 
 PRODUCT_BRAND ?= LegacyDroid
