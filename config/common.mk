@@ -6,6 +6,10 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 # to /data/adb/magisk, and the app is pm-installed at sys.boot_completed.
 PRODUCT_PACKAGES += magisk_apk magisk_busybox magisk_magiskpolicy magisk_setup_sh magisk_setup_rc
 
+# Termux boot integration: the APK ships in /system/etc/termux and is
+# pm-installed as a user app at sys.boot_completed (termux_setup.rc).
+PRODUCT_PACKAGES += termux_apk termux_setup_sh termux_setup_rc
+
 PRODUCT_BRAND ?= LegacyDroid
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
