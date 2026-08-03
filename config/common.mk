@@ -10,6 +10,12 @@ PRODUCT_PACKAGES += magisk_apk magisk_busybox magisk_magiskpolicy magisk_setup_s
 # pm-installed as a user app at sys.boot_completed (termux_setup.rc).
 PRODUCT_PACKAGES += termux_apk termux_setup_sh termux_setup_rc
 
+# SimpMusic boot integration: APK fetched from GitHub at build time
+# (vendor/legacydroid/Android.mk, simpmusic_fetch.sh), ships in
+# /system/etc/simpmusic and is pm-installed as a user app at
+# sys.boot_completed (simpmusic_setup.rc) so it stays sideload-updatable.
+PRODUCT_PACKAGES += simpmusic_apk simpmusic_setup_sh simpmusic_setup_rc
+
 # RealSR ncnn CLIs: x86_64/arm64 per-arch prebuilts + shared libs + models
 # (shipped only with models-RealeSR-general-v3 for now).
 PRODUCT_PACKAGES += \
